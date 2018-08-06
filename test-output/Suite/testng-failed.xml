@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [Suite]" parallel="classes">
+  <parameter name="environment" value="Platint2.properties"/>
+  <parameter name="application" value="apttusCloud"/>
+  <parameter name="browser" value="Chrome"/>
+  <parameter name="hubURL" value="http://localhost:4444/wd/hub"/>
+  <parameter name="runParallel" value="false"/>
+  <listeners>
+    <listener class-name="com.apttus.extent.report.ExtentTestNGIReporterListener"/>
+  </listeners>
+  <test name="Unified Platform Demo Test" group-by-instances="true">
+    <groups>
+      <run>
+        <include name="Smoke"/>
+        <include name="Dashboard"/>
+        <include name="Views"/>
+      </run>
+    </groups>
+  </test> <!-- Unified Platform Demo Test -->
+</suite> <!-- Failed suite [Suite] -->

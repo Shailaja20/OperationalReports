@@ -1,0 +1,114 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'com.apttus.aic'
+version = '0.0.1-SNAPSHOT'
+
+description = """operationalReports"""
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+tasks.withType(JavaCompile) {
+	options.encoding = 'UTF-8'
+}
+
+
+
+def smoke = project.hasProperty("smoke")
+def dev2Eng4 = project.hasProperty("dev2Eng4")
+def platInt2 = project.hasProperty("platInt2")
+def canary = project.hasProperty("canary")
+def staging = project.hasProperty("staging")
+def settingsUsername
+def settingsPassword
+
+
+def getMavenSettingsCredentials = {
+    String userHome = System.getProperty( "user.home" );
+    File mavenSettings = new File(userHome, ".m2/settings.xml")
+    def xmlSlurper = new XmlSlurper()
+    def output = xmlSlurper.parse(mavenSettings)
+    return output."servers"."server"
+}
+
+//this will fetch the credentials from the settings.xml
+def getCredentials = {
+    def entries = getMavenSettingsCredentials()
+    for (entry in entries) {
+		settingsUsername=entry.username.text()
+		settingsPassword=entry.password.text()
+    
+  }
+}
+  
+
+repositories {
+def creds = getCredentials()
+ maven {
+        credentials {
+             username settingsUsername
+            password settingsPassword
+        }
+        url "http://art01.apttuscloud.io/libs-release"
+    }
+	
+	maven {
+        credentials {
+            username settingsUsername
+            password settingsPassword
+        }
+        url "http://art01.apttuscloud.io/libs-snapshot"
+    }
+	
+    maven { url "http://dl.bintray.com/epam/reportportal" }
+}
+
+
+
+dependencies {
+    compile group: 'com.apttus.unifiedframework', name: 'automation', version:'0.5.7_RC1'
+    compile group: 'com.apttus', name: 'essentials', version:'1.2.0'
+    compile group: 'org.testng', name: 'testng', version:'6.9.10'
+    compile group: 'com.jayway.restassured', name: 'rest-assured', version:'2.9.0'
+    compile group: 'org.json', name: 'json', version:'20090211'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version:'3.5.3'
+    compile group: 'org.openqa.selenium.core', name: 'selenium-core', version:'1.0-20080914.225453'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-server', version:'3.0.1'
+	compile group: 'velocity', name: 'velocity-dep', version:'1.4'
+    compile group: 'com.paulhammant', name: 'ngwebdriver', version:'0.9.7'
+    compile group: 'com.github.javafaker', name: 'javafaker', version:'0.13'
+    compile group: 'com.aventstack', name: 'extentreports', version:'3.0.7'
+    compile group: 'xerces', name: 'xercesImpl', version:'2.11.0'
+    compile group: 'javax.mail', name: 'mail', version:'1.4'
+    compile group: 'org.jdom', name: 'jdom', version:'1.1'
+    compile group: 'com.googlecode.charts4j', name: 'charts4j', version:'1.3'
+    compile group: 'com.jayway.jsonpath', name: 'json-path', version:'2.3.0'
+    compile group: 'net.minidev', name: 'json-smart', version:'2.3'
+    testCompile group: 'com.google.inject', name: 'guice', version:'3.0'
+
+}
+
+test {
+    useTestNG() {
+        if(staging) {
+            suites "stg2eng4.xml"
+        }
+
+        if(canary) {
+            suites "canary.xml"
+        }
+		
+		if(dev2Eng4){
+			suites "dev2eng4.xml"
+		
+		}
+		
+		if(platInt2){
+			suites "PlatInt2.xml"
+		
+		}
+		
+		
+    }
+	}
+

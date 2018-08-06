@@ -1,0 +1,48 @@
+{
+	"getAllReports": {
+		"selectData": "Name",
+		"offset": "1",
+		"limit": "50",
+		"getCount": "true"
+	},
+
+	"createReport": {
+		"ObjectId": "clm_Agreement",
+		"PackageId": "clm",
+		"Name": "Demo API Report",
+		"Type": "Report",
+		"Active": true,
+		"IsSystem": false,
+		"IsTemplate": false,
+		"IsAQLQuery": true,
+		"IsActive": true,
+		"EntityName":"clm_Agreement",
+		"Distinct":false,
+		"AutoExpandLookups":false,
+		"TopRecords":"0",
+		"selectColumns":"count(id)",
+		"selectColumns1":"status"
+	},
+	
+	"updateReportDefn":{
+		"Name":" updated Report",
+		"Active":"true",
+		"Type":"Report",
+		"IsSystem":"false",
+		"IsHidden":"false"
+	},
+	
+	"createDashboardDefn":{
+	"Name":"API Dashboard",
+	"Description":"Automated Dashboard",
+	"sizeY" : "1",
+	"sizeX":"1",
+	"row":"0",
+	"col":"0"
+	},
+	
+	"updateDashboardDefn":{
+	"Name":"Updated API Dashboard",
+	"Description":"updated Automated Dashboard"
+	}
+}

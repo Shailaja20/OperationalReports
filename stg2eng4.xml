@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<suite name="Staging Smoke Tests For Operational Reports" verbose="2" parallel="tests" thread-count="2">
+  <parameter name="application" value="apttusCloud" />
+  <parameter name="runParallel" value="false" />
+  <parameter name="environment" value="stg2eng4.properties" />
+  <parameter name="browser" value="Chrome" />
+  <parameter name="hubURL" value="http://localhost:4444/wd/hub" />
+
+
+	<listeners>
+		<listener class-name="com.apttus.extent.report.ExtentTestNGIReporterListener" />
+	</listeners>
+
+	<test name="Operational Reporting Tests" group-by-instances="true" preserve-order="true">
+
+		<classes>
+			<class name="com.apttus.aic.operationalReports.Tests.ReportsTests" />
+			<class name="com.apttus.aic.operationalReports.Tests.DashboardUITest" />
+			<class name="com.apttus.aic.operationalReports.Tests.ViewsUITest" />
+			<class name="com.apttus.aic.operationalReports.Tests.PlatformToolsTests" />
+		</classes>
+	</test>
+</suite>

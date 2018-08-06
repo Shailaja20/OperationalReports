@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" verbose="2" name="Failed suite [Canary Smoke Tests For Operational Reports]" parallel="tests">
+  <parameter name="environment" value="canary.properties"/>
+  <parameter name="application" value="apttusCloud"/>
+  <parameter name="browser" value="Chrome"/>
+  <parameter name="hubURL" value="http://localhost:4444/wd/hub"/>
+  <parameter name="runParallel" value="false"/>
+  <listeners>
+    <listener class-name="com.apttus.extent.report.ExtentTestNGIReporterListener"/>
+  </listeners>
+  <test name="Operational Reporting Tests" group-by-instances="true">
+    <classes>
+      <class name="com.apttus.aic.operationalReports.Tests.ReportsTests"/>
+      <class name="com.apttus.aic.operationalReports.Tests.DashboardUITest"/>
+      <class name="com.apttus.aic.operationalReports.Tests.ViewsUITest"/>
+      <class name="com.apttus.aic.operationalReports.Tests.PlatformToolsTests"/>
+    </classes>
+  </test> <!-- Operational Reporting Tests -->
+  <test name="Operational Reporting Tests(failed)" parallel="tests">
+    <classes>
+      <class name="com.apttus.aic.operationalReports.Tests.ViewsUITest">
+        <methods>
+          <include name="VerifyAnchorObjects"/>
+          <include name="FilterNewWidget"/>
+          <include name="DeleteNewWgView"/>
+          <include name="VerifyViewFilterPageEdt"/>
+          <include name="DeactivatedNewView"/>
+          <include name="VerifyViewFieldPageEdt"/>
+          <include name="VerifyLookUpsChildObjects"/>
+          <include name="VerifyViewFilterPage"/>
+          <include name="ActivatedNewView"/>
+          <include name="CloneNewView"/>
+          <include name="EditQuickView"/>
+          <include name="VerifyViewFieldsPage"/>
+          <include name="CreateNewWigdetView"/>
+          <include name="RenameNewView"/>
+          <include name="DeleteNewView"/>
+          <include name="LoginToAdminApp"/>
+          <include name="CreateQuickView"/>
+          <include name="cleanUp"/>
+          <include name="quitDriver"/>
+          <include name="EditNewView"/>
+        </methods>
+      </class> <!-- com.apttus.aic.operationalReports.Tests.ViewsUITest -->
+      <class name="com.apttus.aic.operationalReports.Tests.PlatformToolsTests">
+        <methods>
+          <include name="tokenGenerations"/>
+        </methods>
+      </class> <!-- com.apttus.aic.operationalReports.Tests.PlatformToolsTests -->
+      <class name="com.apttus.aic.operationalReports.Tests.DashboardUITest">
+        <methods>
+          <include name="CreateNewWidget"/>
+          <include name="LoginToAdminApp"/>
+          <include name="quitDriver"/>
+          <include name="cleanUp"/>
+        </methods>
+      </class> <!-- com.apttus.aic.operationalReports.Tests.DashboardUITest -->
+      <class name="com.apttus.aic.operationalReports.Tests.ReportsTests">
+        <methods>
+          <include name="CreateLineChartWizard"/>
+          <include name="CreatePivotChartWizard"/>
+          <include name="FilterReportWithSearchText" invocation-numbers="1"/>
+          <include name="cleanUp"/>
+          <include name="quitDriver"/>
+          <include name="LoginToAdminApp"/>
+        </methods>
+      </class> <!-- com.apttus.aic.operationalReports.Tests.ReportsTests -->
+    </classes>
+  </test> <!-- Operational Reporting Tests(failed) -->
+</suite> <!-- Failed suite [Canary Smoke Tests For Operational Reports] -->

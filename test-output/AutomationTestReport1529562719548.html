@@ -1,0 +1,2927 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/bee7a4abdc590e21eec8618a90c81ff4d16e500a/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title> Automation Report</title>
+
+	<style type='text/css'>
+	</style>
+</head>
+
+	<body class='extent dark default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>0.0.1 Test Report</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Jun 21, 2018 11:41:43 AM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>v3.0.7</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>ReportsTests</a></li>
+					<li><a href='#'>smoke</a></li>
+					<li><a href='#'>DashboardUITest</a></li>
+					<li><a href='#'>Dashboard</a></li>
+					<li><a href='#'>ViewsUITest</a></li>
+					<li><a href='#'>Views</a></li>
+					<li><a href='#'>PlatformToolsTests</a></li>
+					<li><a href='#'>Smoke</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>DeActivateReport</span>
+						<span class='test-time'>Jun 21, 2018 12:00:37 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 12:00:37 PM</span>
+	<span class='label end-time'>Jun 21, 2018 12:00:52 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+973ms</span>
+</div>
+	<div class='test-desc'>To verify the Activate and Deactivate Functionality of the Reports Fileds </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ReportsTests</span>
+				<span class='category label white-text'>smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>org.openqa.selenium.WebDriverException: unknown error: Element <button class="md-icon-button md-button" type="button" ng-transclude="" id="openMenuBtn" ng-click="vm.openMenu(row, $mdMenu, $event)" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-owns="menu_container_11">...</button> is not clickable at point (283, 199). Other element would receive the click: <div class="md-dialog-container" tabindex="-1" style="top: 0px; height: 571px;">...</div>
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'L005614', ip: '10.7.93.231', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\shsharma\AppData\Local\Temp\scoped_dir12020_11950}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=67.0.3396.87, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: b5da8d2b904d591f02d795f93e1c62a0</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>CreatePivotChartWizard</span>
+						<span class='test-time'>Jun 21, 2018 11:56:54 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:56:54 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:59:33 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 2m 39s+626ms</span>
+</div>
+	<div class='test-desc'>Verify Fields in Create Report- Select Dataset </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ReportsTests</span>
+				<span class='category label white-text'>smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for at least one condition to be valid: element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //*[@class='filter-row' and @style=""]//*[@id='selectObject']' (tried for 30 second(s) with 500 MILLISECONDS interval)</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>CreateVerticalBarChartWizard</span>
+						<span class='test-time'>Jun 21, 2018 12:00:13 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 12:00:13 PM</span>
+	<span class='label end-time'>Jun 21, 2018 12:00:28 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+150ms</span>
+</div>
+	<div class='test-desc'>Verify Fields in Create Report- Select Dataset </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ReportsTests</span>
+				<span class='category label white-text'>smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>org.openqa.selenium.WebDriverException: unknown error: Element <button class="ands-btn ands-primary md-button" type="button" ng-transclude="" ng-click="vm.openMenu($mdMenu, $event)" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-owns="menu_container_1">...</button> is not clickable at point (1224, 80). Other element would receive the click: <div class="md-dialog-container" tabindex="-1" style="top: 0px; height: 571px;">...</div>
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'L005614', ip: '10.7.93.231', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\shsharma\AppData\Local\Temp\scoped_dir12020_11950}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=67.0.3396.87, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: b5da8d2b904d591f02d795f93e1c62a0</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>CreateHorizontalBarChartWizard</span>
+						<span class='test-time'>Jun 21, 2018 12:01:28 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 12:01:28 PM</span>
+	<span class='label end-time'>Jun 21, 2018 12:01:45 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+88ms</span>
+</div>
+	<div class='test-desc'>Verify Fields in Create Report- Select Dataset </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ReportsTests</span>
+				<span class='category label white-text'>smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>org.openqa.selenium.WebDriverException: unknown error: Element <button class="ands-btn ands-primary md-button" type="button" ng-transclude="" ng-click="vm.openMenu($mdMenu, $event)" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-owns="menu_container_1">...</button> is not clickable at point (1224, 80). Other element would receive the click: <div class="md-dialog-container" tabindex="-1" style="top: 0px; height: 571px;">...</div>
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'L005614', ip: '10.7.93.231', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\shsharma\AppData\Local\Temp\scoped_dir12020_11950}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=67.0.3396.87, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: b5da8d2b904d591f02d795f93e1c62a0</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>quickCreateReport</span>
+						<span class='test-time'>Jun 21, 2018 12:01:02 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 12:01:02 PM</span>
+	<span class='label end-time'>Jun 21, 2018 12:01:19 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+236ms</span>
+</div>
+	<div class='test-desc'>To Create a Quick Report </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ReportsTests</span>
+				<span class='category label white-text'>smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>org.openqa.selenium.WebDriverException: unknown error: Element <button class="ands-btn ands-primary md-button" type="button" ng-transclude="" ng-click="vm.openMenu($mdMenu, $event)" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-owns="menu_container_1">...</button> is not clickable at point (1224, 80). Other element would receive the click: <div class="md-dialog-container" tabindex="-1" style="top: 0px; height: 571px;">...</div>
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'L005614', ip: '10.7.93.231', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\shsharma\AppData\Local\Temp\scoped_dir12020_11950}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=67.0.3396.87, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: b5da8d2b904d591f02d795f93e1c62a0</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>CreateTabularReportWizard</span>
+						<span class='test-time'>Jun 21, 2018 11:59:44 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:59:44 AM</span>
+	<span class='label end-time'>Jun 21, 2018 12:00:02 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+810ms</span>
+</div>
+	<div class='test-desc'>Create a tabular report starting with an OOTB Base Dataset or a Custom Base Dataset </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ReportsTests</span>
+				<span class='category label white-text'>smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>org.openqa.selenium.WebDriverException: unknown error: Element <button class="ands-btn ands-primary md-button" type="button" ng-transclude="" ng-click="vm.openMenu($mdMenu, $event)" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-owns="menu_container_1">...</button> is not clickable at point (1224, 80). Other element would receive the click: <div class="md-dialog-container" tabindex="-1" style="top: 0px; height: 571px;">...</div>
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'L005614', ip: '10.7.93.231', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\shsharma\AppData\Local\Temp\scoped_dir12020_11950}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=67.0.3396.87, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: b5da8d2b904d591f02d795f93e1c62a0</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>EditDashboard</span>
+						<span class='test-time'>Jun 21, 2018 11:52:39 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:52:39 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:53:50 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 11s+493ms</span>
+</div>
+	<div class='test-desc'>ST_04 To verify the Dashboard Edit Functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>DashboardUITest</span>
+				<span class='category label white-text'>Dashboard</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>org.openqa.selenium.ScriptTimeoutException: asynchronous script timeout: result was not received in 60 seconds
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'L005614', ip: '10.7.93.231', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\shsharma\AppData\Local\Temp\scoped_dir9812_30330}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=67.0.3396.87, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 79e7e7b1709c45f4e661bcb5652816ae</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>CreateLineChartWizard</span>
+						<span class='test-time'>Jun 21, 2018 11:54:58 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:54:58 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:55:44 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 46s+225ms</span>
+</div>
+	<div class='test-desc'>Verify Fields in Create Report- Select Dataset </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ReportsTests</span>
+				<span class='category label white-text'>smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'L005614', ip: '10.7.93.231', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\shsharma\AppData\Local\Temp\scoped_dir12020_11950}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=67.0.3396.87, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: b5da8d2b904d591f02d795f93e1c62a0</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>CreateNewWigdetView</span>
+						<span class='test-time'>Jun 21, 2018 11:45:05 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:45:05 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:46:47 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 41s+997ms</span>
+</div>
+	<div class='test-desc'>To Test Quick Create View Functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ViewsUITest</span>
+				<span class='category label white-text'>Views</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>org.openqa.selenium.ScriptTimeoutException: asynchronous script timeout: result was not received in 60 seconds
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'L005614', ip: '10.7.93.231', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\shsharma\AppData\Local\Temp\scoped_dir9024_5122}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=67.0.3396.87, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: a1dc4ead0c3ac551ab733ca777e57923</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>CreatePieChartWizard</span>
+						<span class='test-time'>Jun 21, 2018 11:55:55 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:55:55 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:56:44 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 48s+525ms</span>
+</div>
+	<div class='test-desc'>Verify Fields in Create Report- Select Dataset </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ReportsTests</span>
+				<span class='category label white-text'>smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=67.0.3396.87)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'L005614', ip: '10.7.93.231', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\shsharma\AppData\Local\Temp\scoped_dir12020_11950}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=67.0.3396.87, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: b5da8d2b904d591f02d795f93e1c62a0</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>EditQuickView</span>
+						<span class='test-time'>Jun 21, 2018 11:50:04 AM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:50:04 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:50:04 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+	<div class='test-desc'>To Test Quick Edit View Functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ViewsUITest</span>
+				<span class='category label white-text'>Views</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='skip'>
+					<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Method Dependency Failure! <br>Method ViewsUITest.EditQuickView()[pri:0, instance:com.apttus.aic.operationalReports.Tests.ViewsUITest@6536e911] depends on not successfully finished methods</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>RenameDashboard</span>
+						<span class='test-time'>Jun 21, 2018 11:54:08 AM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:54:08 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:54:08 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+	<div class='test-desc'>ST_06 To verify the Dashboard Rename Functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>DashboardUITest</span>
+				<span class='category label white-text'>Dashboard</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='skip'>
+					<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Method Dependency Failure! <br>Method DashboardUITest.RenameDashboard()[pri:0, instance:com.apttus.aic.operationalReports.Tests.DashboardUITest@5f9d02cb] depends on not successfully finished methods</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>DeleteNewWidget</span>
+						<span class='test-time'>Jun 21, 2018 11:54:08 AM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:54:08 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:54:08 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+	<div class='test-desc'>ST_07 To verify the Dashboard Delete Functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>DashboardUITest</span>
+				<span class='category label white-text'>Dashboard</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='skip'>
+					<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Method Dependency Failure! <br>Method DashboardUITest.DeleteNewWidget()[pri:0, instance:com.apttus.aic.operationalReports.Tests.DashboardUITest@5f9d02cb] depends on not successfully finished methods</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>EditReportWizard</span>
+						<span class='test-time'>Jun 21, 2018 12:01:54 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 12:01:54 PM</span>
+	<span class='label end-time'>Jun 21, 2018 12:01:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+	<div class='test-desc'>To verify the Edit Functionality of Report Wizard </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ReportsTests</span>
+				<span class='category label white-text'>smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='skip'>
+					<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Method Dependency Failure! <br>Method ReportsTests.EditReportWizard()[pri:0, instance:com.apttus.aic.operationalReports.Tests.ReportsTests@2286778] depends on not successfully finished methods</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>DeleteNewView</span>
+						<span class='test-time'>Jun 21, 2018 11:50:04 AM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:50:04 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:50:04 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+	<div class='test-desc'>Datasets Master Details View </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ViewsUITest</span>
+				<span class='category label white-text'>Views</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='skip'>
+					<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Method Dependency Failure! <br>Method ViewsUITest.DeleteNewView()[pri:0, instance:com.apttus.aic.operationalReports.Tests.ViewsUITest@6536e911] depends on not successfully finished methods</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>createCloneReport</span>
+						<span class='test-time'>Jun 21, 2018 12:01:54 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 12:01:54 PM</span>
+	<span class='label end-time'>Jun 21, 2018 12:01:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+	<div class='test-desc'>To verify the Reports Clone Functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ReportsTests</span>
+				<span class='category label white-text'>smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='skip'>
+					<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Method Dependency Failure! <br>Method ReportsTests.createCloneReport()[pri:0, instance:com.apttus.aic.operationalReports.Tests.ReportsTests@2286778] depends on not successfully finished methods</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>CloneNewView</span>
+						<span class='test-time'>Jun 21, 2018 11:50:04 AM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:50:04 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:50:04 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+	<div class='test-desc'>Verify the Cloning of Dataset </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ViewsUITest</span>
+				<span class='category label white-text'>Views</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='skip'>
+					<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Method Dependency Failure! <br>Method ViewsUITest.CloneNewView()[pri:0, instance:com.apttus.aic.operationalReports.Tests.ViewsUITest@6536e911] depends on not successfully finished methods</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>ActivateReport</span>
+						<span class='test-time'>Jun 21, 2018 12:01:54 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 12:01:54 PM</span>
+	<span class='label end-time'>Jun 21, 2018 12:01:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+	<div class='test-desc'>To verify the Activate and Deactivate Functionality of the Reports Fileds </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ReportsTests</span>
+				<span class='category label white-text'>smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='skip'>
+					<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Method Dependency Failure! <br>Method ReportsTests.ActivateReport()[pri:0, instance:com.apttus.aic.operationalReports.Tests.ReportsTests@2286778] depends on not successfully finished methods</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>renameReport</span>
+						<span class='test-time'>Jun 21, 2018 12:01:54 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 12:01:54 PM</span>
+	<span class='label end-time'>Jun 21, 2018 12:01:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+	<div class='test-desc'>To verify the Rename Functionality of the Reports </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ReportsTests</span>
+				<span class='category label white-text'>smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='skip'>
+					<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Method Dependency Failure! <br>Method ReportsTests.renameReport()[pri:0, instance:com.apttus.aic.operationalReports.Tests.ReportsTests@2286778] depends on not successfully finished methods</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>RenameNewView</span>
+						<span class='test-time'>Jun 21, 2018 11:50:04 AM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:50:04 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:50:04 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+	<div class='test-desc'>Datasets Master Details View </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ViewsUITest</span>
+				<span class='category label white-text'>Views</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='skip'>
+					<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Method Dependency Failure! <br>Method ViewsUITest.RenameNewView()[pri:0, instance:com.apttus.aic.operationalReports.Tests.ViewsUITest@6536e911] depends on not successfully finished methods</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>ExportToCSV</span>
+						<span class='test-time'>Jun 21, 2018 12:01:54 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 12:01:54 PM</span>
+	<span class='label end-time'>Jun 21, 2018 12:01:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+	<div class='test-desc'>To verify the Export functionality of the Reports Module </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ReportsTests</span>
+				<span class='category label white-text'>smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='skip'>
+					<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Method Dependency Failure! <br>Method ReportsTests.ExportToCSV()[pri:0, instance:com.apttus.aic.operationalReports.Tests.ReportsTests@2286778] depends on not successfully finished methods</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='22'>
+					<div class='test-heading'>
+						<span class='test-name'>EditNewView</span>
+						<span class='test-time'>Jun 21, 2018 11:50:04 AM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:50:04 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:50:04 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+	<div class='test-desc'>To Test Quick Edit View Functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ViewsUITest</span>
+				<span class='category label white-text'>Views</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='skip'>
+					<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Method Dependency Failure! <br>Method ViewsUITest.EditNewView()[pri:0, instance:com.apttus.aic.operationalReports.Tests.ViewsUITest@6536e911] depends on not successfully finished methods</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='23'>
+					<div class='test-heading'>
+						<span class='test-name'>DeactivatedNewView</span>
+						<span class='test-time'>Jun 21, 2018 11:50:04 AM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:50:04 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:50:04 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+	<div class='test-desc'>Datasets Master Details View </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ViewsUITest</span>
+				<span class='category label white-text'>Views</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='skip'>
+					<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Method Dependency Failure! <br>Method ViewsUITest.DeactivatedNewView()[pri:0, instance:com.apttus.aic.operationalReports.Tests.ViewsUITest@6536e911] depends on not successfully finished methods</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='24'>
+					<div class='test-heading'>
+						<span class='test-name'>DeleteReport</span>
+						<span class='test-time'>Jun 21, 2018 12:01:54 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 12:01:54 PM</span>
+	<span class='label end-time'>Jun 21, 2018 12:01:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+	<div class='test-desc'>To verify the Delete Functionality of the Reports Fields </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ReportsTests</span>
+				<span class='category label white-text'>smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='skip'>
+					<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Method Dependency Failure! <br>Method ReportsTests.DeleteReport()[pri:0, instance:com.apttus.aic.operationalReports.Tests.ReportsTests@2286778] depends on not successfully finished methods</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='25'>
+					<div class='test-heading'>
+						<span class='test-name'>quickEditReport</span>
+						<span class='test-time'>Jun 21, 2018 12:01:54 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 12:01:54 PM</span>
+	<span class='label end-time'>Jun 21, 2018 12:01:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+	<div class='test-desc'>To verify Quick Edit Functionality of the already generated Reports </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ReportsTests</span>
+				<span class='category label white-text'>smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='skip'>
+					<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Method Dependency Failure! <br>Method ReportsTests.quickEditReport()[pri:0, instance:com.apttus.aic.operationalReports.Tests.ReportsTests@2286778] depends on not successfully finished methods</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='26'>
+					<div class='test-heading'>
+						<span class='test-name'>DeleteNewWgView</span>
+						<span class='test-time'>Jun 21, 2018 11:50:04 AM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:50:04 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:50:04 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+	<div class='test-desc'>Datasets Master Details View </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ViewsUITest</span>
+				<span class='category label white-text'>Views</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='skip'>
+					<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Method Dependency Failure! <br>Method ViewsUITest.DeleteNewWgView()[pri:0, instance:com.apttus.aic.operationalReports.Tests.ViewsUITest@6536e911] depends on not successfully finished methods</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='27'>
+					<div class='test-heading'>
+						<span class='test-name'>CloneNewWidget</span>
+						<span class='test-time'>Jun 21, 2018 11:54:08 AM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:54:08 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:54:08 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+	<div class='test-desc'>ST_05 To verify the Dashboard Clone Functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>DashboardUITest</span>
+				<span class='category label white-text'>Dashboard</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='skip'>
+					<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Method Dependency Failure! <br>Method DashboardUITest.CloneNewWidget()[pri:0, instance:com.apttus.aic.operationalReports.Tests.DashboardUITest@5f9d02cb] depends on not successfully finished methods</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='28'>
+					<div class='test-heading'>
+						<span class='test-name'>ActivatedNewView</span>
+						<span class='test-time'>Jun 21, 2018 11:50:04 AM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:50:04 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:50:04 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+	<div class='test-desc'>Datasets Master Details View </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ViewsUITest</span>
+				<span class='category label white-text'>Views</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='skip'>
+					<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Method Dependency Failure! <br>Method ViewsUITest.ActivatedNewView()[pri:0, instance:com.apttus.aic.operationalReports.Tests.ViewsUITest@6536e911] depends on not successfully finished methods</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='29'>
+					<div class='test-heading'>
+						<span class='test-name'>createDashboardDefn</span>
+						<span class='test-time'>Jun 21, 2018 11:41:43 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:41:43 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:41:46 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+405ms</span>
+</div>
+	<div class='test-desc'>Create Dashboard Definition </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>PlatformToolsTests</span>
+				<span class='category label white-text'>Smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='30'>
+					<div class='test-heading'>
+						<span class='test-name'>updateReportDefn</span>
+						<span class='test-time'>Jun 21, 2018 11:42:12 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:42:12 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:42:15 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+65ms</span>
+</div>
+	<div class='test-desc'>Update the Report Details </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>PlatformToolsTests</span>
+				<span class='category label white-text'>Smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='31'>
+					<div class='test-heading'>
+						<span class='test-name'>FilterNewWidget</span>
+						<span class='test-time'>Jun 21, 2018 11:44:41 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:44:41 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:44:56 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+709ms</span>
+</div>
+	<div class='test-desc'>Filter a new view </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ViewsUITest</span>
+				<span class='category label white-text'>Views</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='32'>
+					<div class='test-heading'>
+						<span class='test-name'>generateReportRun</span>
+						<span class='test-time'>Jun 21, 2018 11:42:01 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:42:01 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:42:03 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+880ms</span>
+</div>
+	<div class='test-desc'>Run the Report </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>PlatformToolsTests</span>
+				<span class='category label white-text'>Smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='33'>
+					<div class='test-heading'>
+						<span class='test-name'>deleteReportDefn</span>
+						<span class='test-time'>Jun 21, 2018 11:42:18 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:42:18 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:42:21 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+800ms</span>
+</div>
+	<div class='test-desc'>Delete the Report Definition </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>PlatformToolsTests</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='34'>
+					<div class='test-heading'>
+						<span class='test-name'>cloneReport</span>
+						<span class='test-time'>Jun 21, 2018 11:41:54 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:41:54 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:41:57 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+906ms</span>
+</div>
+	<div class='test-desc'>Clone Report Definition </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>PlatformToolsTests</span>
+				<span class='category label white-text'>Smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='35'>
+					<div class='test-heading'>
+						<span class='test-name'>getDashboardDetailsDefn</span>
+						<span class='test-time'>Jun 21, 2018 11:42:03 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:42:03 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:42:06 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+592ms</span>
+</div>
+	<div class='test-desc'>Get Dashboard details </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>PlatformToolsTests</span>
+				<span class='category label white-text'>Smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='36'>
+					<div class='test-heading'>
+						<span class='test-name'>createReport</span>
+						<span class='test-time'>Jun 21, 2018 11:41:46 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:41:46 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:41:49 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+859ms</span>
+</div>
+	<div class='test-desc'>Create Reports Definition </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>PlatformToolsTests</span>
+				<span class='category label white-text'>Smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='37'>
+					<div class='test-heading'>
+						<span class='test-name'>cloneDashboardDefn</span>
+						<span class='test-time'>Jun 21, 2018 11:41:51 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:41:51 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:41:54 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+789ms</span>
+</div>
+	<div class='test-desc'>Clone Dashboard </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>PlatformToolsTests</span>
+				<span class='category label white-text'>Smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='38'>
+					<div class='test-heading'>
+						<span class='test-name'>CreateNewWidget</span>
+						<span class='test-time'>Jun 21, 2018 11:50:46 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:50:46 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:52:19 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 32s+991ms</span>
+</div>
+	<div class='test-desc'>ST01_To Create and Save a Dashboard </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>DashboardUITest</span>
+				<span class='category label white-text'>Dashboard</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='39'>
+					<div class='test-heading'>
+						<span class='test-name'>getReportDefinition</span>
+						<span class='test-time'>Jun 21, 2018 11:42:06 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:42:06 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:42:09 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+971ms</span>
+</div>
+	<div class='test-desc'>Get the Report definition by Id </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>PlatformToolsTests</span>
+				<span class='category label white-text'>Smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='40'>
+					<div class='test-heading'>
+						<span class='test-name'>updateDashboardDefn</span>
+						<span class='test-time'>Jun 21, 2018 11:42:09 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:42:09 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:42:12 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+988ms</span>
+</div>
+	<div class='test-desc'>Update Dashboard Definition details </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>PlatformToolsTests</span>
+				<span class='category label white-text'>Smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='41'>
+					<div class='test-heading'>
+						<span class='test-name'>CreateQuickView</span>
+						<span class='test-time'>Jun 21, 2018 11:43:07 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:43:07 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:44:36 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 28s+489ms</span>
+</div>
+	<div class='test-desc'>To Test Quick Create View Functionality </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>ViewsUITest</span>
+				<span class='category label white-text'>Views</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='42'>
+					<div class='test-heading'>
+						<span class='test-name'>exportReportDetails</span>
+						<span class='test-time'>Jun 21, 2018 11:41:57 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:41:57 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:42:01 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+397ms</span>
+</div>
+	<div class='test-desc'>Export CSV File Details </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>PlatformToolsTests</span>
+				<span class='category label white-text'>Smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='43'>
+					<div class='test-heading'>
+						<span class='test-name'>getAllReports</span>
+						<span class='test-time'>Jun 21, 2018 11:41:49 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:41:49 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:41:51 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+940ms</span>
+</div>
+	<div class='test-desc'>Get All Reports </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>PlatformToolsTests</span>
+				<span class='category label white-text'>Smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='44'>
+					<div class='test-heading'>
+						<span class='test-name'>deleteDashboard</span>
+						<span class='test-time'>Jun 21, 2018 11:42:15 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2018 11:42:15 AM</span>
+	<span class='label end-time'>Jun 21, 2018 11:42:18 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+856ms</span>
+</div>
+	<div class='test-desc'>Delete Dashboard </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>PlatformToolsTests</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:01:58 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='36.364%'><span class='strong'>16</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='22.727%'>10</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='40.909%'>18</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='36.364%'><span class='strong'>16</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='22.727%'>10</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='40.909%'>18</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+</div>
+<!-- test view -->
+<div id='category-view' class='view hide'>
+
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Categories</h3>
+			<ul id='category-collection' class='category-collection'>
+				
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>ReportsTests</span>
+						<span class='category-status right'>
+							<span class='label fail'>8</span>
+							<span class='label others'>7</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span class='label red lighten-1 white-text'>Failed: 8</span>
+							<span class='label yellow darken-2 white-text'>Others: 7</span>
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jun 21, 2018 12:00:37 PM</td>
+										<td class='linked' test-id='1'>DeActivateReport</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:56:54 AM</td>
+										<td class='linked' test-id='2'>CreatePivotChartWizard</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 12:00:13 PM</td>
+										<td class='linked' test-id='3'>CreateVerticalBarChartWizard</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 12:01:28 PM</td>
+										<td class='linked' test-id='4'>CreateHorizontalBarChartWizard</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 12:01:02 PM</td>
+										<td class='linked' test-id='5'>quickCreateReport</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:59:44 AM</td>
+										<td class='linked' test-id='6'>CreateTabularReportWizard</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:54:58 AM</td>
+										<td class='linked' test-id='8'>CreateLineChartWizard</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:55:55 AM</td>
+										<td class='linked' test-id='10'>CreatePieChartWizard</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 12:01:54 PM</td>
+										<td class='linked' test-id='14'>EditReportWizard</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 12:01:54 PM</td>
+										<td class='linked' test-id='16'>createCloneReport</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 12:01:54 PM</td>
+										<td class='linked' test-id='18'>ActivateReport</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 12:01:54 PM</td>
+										<td class='linked' test-id='19'>renameReport</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 12:01:54 PM</td>
+										<td class='linked' test-id='21'>ExportToCSV</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 12:01:54 PM</td>
+										<td class='linked' test-id='24'>DeleteReport</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 12:01:54 PM</td>
+										<td class='linked' test-id='25'>quickEditReport</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>smoke</span>
+						<span class='category-status right'>
+							<span class='label fail'>8</span>
+							<span class='label others'>7</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span class='label red lighten-1 white-text'>Failed: 8</span>
+							<span class='label yellow darken-2 white-text'>Others: 7</span>
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jun 21, 2018 12:00:37 PM</td>
+										<td class='linked' test-id='1'>DeActivateReport</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:56:54 AM</td>
+										<td class='linked' test-id='2'>CreatePivotChartWizard</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 12:00:13 PM</td>
+										<td class='linked' test-id='3'>CreateVerticalBarChartWizard</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 12:01:28 PM</td>
+										<td class='linked' test-id='4'>CreateHorizontalBarChartWizard</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 12:01:02 PM</td>
+										<td class='linked' test-id='5'>quickCreateReport</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:59:44 AM</td>
+										<td class='linked' test-id='6'>CreateTabularReportWizard</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:54:58 AM</td>
+										<td class='linked' test-id='8'>CreateLineChartWizard</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:55:55 AM</td>
+										<td class='linked' test-id='10'>CreatePieChartWizard</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 12:01:54 PM</td>
+										<td class='linked' test-id='14'>EditReportWizard</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 12:01:54 PM</td>
+										<td class='linked' test-id='16'>createCloneReport</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 12:01:54 PM</td>
+										<td class='linked' test-id='18'>ActivateReport</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 12:01:54 PM</td>
+										<td class='linked' test-id='19'>renameReport</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 12:01:54 PM</td>
+										<td class='linked' test-id='21'>ExportToCSV</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 12:01:54 PM</td>
+										<td class='linked' test-id='24'>DeleteReport</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 12:01:54 PM</td>
+										<td class='linked' test-id='25'>quickEditReport</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>DashboardUITest</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+							<span class='label fail'>1</span>
+							<span class='label others'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
+							<span class='label yellow darken-2 white-text'>Others: 3</span>
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jun 21, 2018 11:52:39 AM</td>
+										<td class='linked' test-id='7'>EditDashboard</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:54:08 AM</td>
+										<td class='linked' test-id='12'>RenameDashboard</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:54:08 AM</td>
+										<td class='linked' test-id='13'>DeleteNewWidget</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:54:08 AM</td>
+										<td class='linked' test-id='27'>CloneNewWidget</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:50:46 AM</td>
+										<td class='linked' test-id='38'>CreateNewWidget</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>Dashboard</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+							<span class='label fail'>1</span>
+							<span class='label others'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
+							<span class='label yellow darken-2 white-text'>Others: 3</span>
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jun 21, 2018 11:52:39 AM</td>
+										<td class='linked' test-id='7'>EditDashboard</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:54:08 AM</td>
+										<td class='linked' test-id='12'>RenameDashboard</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:54:08 AM</td>
+										<td class='linked' test-id='13'>DeleteNewWidget</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:54:08 AM</td>
+										<td class='linked' test-id='27'>CloneNewWidget</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:50:46 AM</td>
+										<td class='linked' test-id='38'>CreateNewWidget</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>ViewsUITest</span>
+						<span class='category-status right'>
+							<span class='label pass'>2</span>
+							<span class='label fail'>1</span>
+							<span class='label others'>8</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
+							<span class='label yellow darken-2 white-text'>Others: 8</span>
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jun 21, 2018 11:45:05 AM</td>
+										<td class='linked' test-id='9'>CreateNewWigdetView</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:50:04 AM</td>
+										<td class='linked' test-id='11'>EditQuickView</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:50:04 AM</td>
+										<td class='linked' test-id='15'>DeleteNewView</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:50:04 AM</td>
+										<td class='linked' test-id='17'>CloneNewView</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:50:04 AM</td>
+										<td class='linked' test-id='20'>RenameNewView</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:50:04 AM</td>
+										<td class='linked' test-id='22'>EditNewView</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:50:04 AM</td>
+										<td class='linked' test-id='23'>DeactivatedNewView</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:50:04 AM</td>
+										<td class='linked' test-id='26'>DeleteNewWgView</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:50:04 AM</td>
+										<td class='linked' test-id='28'>ActivatedNewView</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:44:41 AM</td>
+										<td class='linked' test-id='31'>FilterNewWidget</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:43:07 AM</td>
+										<td class='linked' test-id='41'>CreateQuickView</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>Views</span>
+						<span class='category-status right'>
+							<span class='label pass'>2</span>
+							<span class='label fail'>1</span>
+							<span class='label others'>8</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
+							<span class='label yellow darken-2 white-text'>Others: 8</span>
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jun 21, 2018 11:45:05 AM</td>
+										<td class='linked' test-id='9'>CreateNewWigdetView</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:50:04 AM</td>
+										<td class='linked' test-id='11'>EditQuickView</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:50:04 AM</td>
+										<td class='linked' test-id='15'>DeleteNewView</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:50:04 AM</td>
+										<td class='linked' test-id='17'>CloneNewView</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:50:04 AM</td>
+										<td class='linked' test-id='20'>RenameNewView</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:50:04 AM</td>
+										<td class='linked' test-id='22'>EditNewView</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:50:04 AM</td>
+										<td class='linked' test-id='23'>DeactivatedNewView</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:50:04 AM</td>
+										<td class='linked' test-id='26'>DeleteNewWgView</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:50:04 AM</td>
+										<td class='linked' test-id='28'>ActivatedNewView</td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:44:41 AM</td>
+										<td class='linked' test-id='31'>FilterNewWidget</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:43:07 AM</td>
+										<td class='linked' test-id='41'>CreateQuickView</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>PlatformToolsTests</span>
+						<span class='category-status right'>
+							<span class='label pass'>13</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 13</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jun 21, 2018 11:41:43 AM</td>
+										<td class='linked' test-id='29'>createDashboardDefn</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:42:12 AM</td>
+										<td class='linked' test-id='30'>updateReportDefn</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:42:01 AM</td>
+										<td class='linked' test-id='32'>generateReportRun</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:42:18 AM</td>
+										<td class='linked' test-id='33'>deleteReportDefn</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:41:54 AM</td>
+										<td class='linked' test-id='34'>cloneReport</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:42:03 AM</td>
+										<td class='linked' test-id='35'>getDashboardDetailsDefn</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:41:46 AM</td>
+										<td class='linked' test-id='36'>createReport</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:41:51 AM</td>
+										<td class='linked' test-id='37'>cloneDashboardDefn</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:42:06 AM</td>
+										<td class='linked' test-id='39'>getReportDefinition</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:42:09 AM</td>
+										<td class='linked' test-id='40'>updateDashboardDefn</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:41:57 AM</td>
+										<td class='linked' test-id='42'>exportReportDetails</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:41:49 AM</td>
+										<td class='linked' test-id='43'>getAllReports</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:42:15 AM</td>
+										<td class='linked' test-id='44'>deleteDashboard</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>Smoke</span>
+						<span class='category-status right'>
+							<span class='label pass'>11</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 11</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jun 21, 2018 11:41:43 AM</td>
+										<td class='linked' test-id='29'>createDashboardDefn</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:42:12 AM</td>
+										<td class='linked' test-id='30'>updateReportDefn</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:42:01 AM</td>
+										<td class='linked' test-id='32'>generateReportRun</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:41:54 AM</td>
+										<td class='linked' test-id='34'>cloneReport</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:42:03 AM</td>
+										<td class='linked' test-id='35'>getDashboardDetailsDefn</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:41:46 AM</td>
+										<td class='linked' test-id='36'>createReport</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:41:51 AM</td>
+										<td class='linked' test-id='37'>cloneDashboardDefn</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:42:06 AM</td>
+										<td class='linked' test-id='39'>getReportDefinition</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:42:09 AM</td>
+										<td class='linked' test-id='40'>updateDashboardDefn</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:41:57 AM</td>
+										<td class='linked' test-id='42'>exportReportDetails</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jun 21, 2018 11:41:49 AM</td>
+										<td class='linked' test-id='43'>getAllReports</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>44</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>44</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Jun 21, 2018 11:41:43 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Jun 21, 2018 12:01:58 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>1,214,571ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+						</tr>
+						<tr>
+							<td>ReportsTests</td>
+							<td>0</td>
+							<td>8</td>
+							<td>7</td>
+						</tr>
+						<tr>
+							<td>smoke</td>
+							<td>0</td>
+							<td>8</td>
+							<td>7</td>
+						</tr>
+						<tr>
+							<td>DashboardUITest</td>
+							<td>1</td>
+							<td>1</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>Dashboard</td>
+							<td>1</td>
+							<td>1</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>ViewsUITest</td>
+							<td>2</td>
+							<td>1</td>
+							<td>8</td>
+						</tr>
+						<tr>
+							<td>Views</td>
+							<td>2</td>
+							<td>1</td>
+							<td>8</td>
+						</tr>
+						<tr>
+							<td>PlatformToolsTests</td>
+							<td>13</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>Smoke</td>
+							<td>11</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 16,
+				failParent: 10,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 18,
+				exceptionsParent: 28,
+				
+				passChild: 16,
+				failChild: 10,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 18,
+				infoChild: 0,
+				exceptionsChild: 28,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 		</script>
+	</body>
+	
+</html>

@@ -1,0 +1,99 @@
+	{
+	     "filteredReportData":{
+	     "filterLink":"Name",
+	     "searchText":"ignore"
+	     },
+	     "FilterReportWithReportVisualizationType":{
+	     "typeReport":"Visualization Type",
+	     "filterValue":"Report"
+	     },
+	     "FilterReportWithChartVisualizationType":{
+	     "typeReport":"Visualization Type",
+	     "filterValue":"Chart"
+	     },
+	     "FilterReportsByName":{
+	     "filterLink":"Name",
+	     "searchText":"Test"
+	     },
+	     "FilterReportsByDescription":{
+	     "filterLink":"Description",
+	     "searchText":"Test"
+	     },
+	     "FilterReportWithActiveStatus":{
+	     "statusReport":"Active",
+	     "filterValue":"True",
+	     "verifyStatusReport":"Active"
+	     },
+	     "FilterReportWithInactiveStatus":{
+	     "statusReport":"Active",
+	     "filterValue":"False",
+	     "verifyStatusReport":"Inactive"
+	     },
+	     "quickCreateReport":{
+	     "reportName":"QC Automation Report",
+	     "reportDescp": "Automation Report Description",
+	     "reportQuery":"{\"EntityName\":\"clm_agreement\",\"Distinct\":false,\"AutoExpandLookups\":false,\"Columns\":[\"id\",\"name\",\"sum(totalagreementvalue) as TotalValue\"],\"Criteria\":{\"ExpressionOperator\":\"AND\",\"Conditions\":[{\"EntityName\":null,\"FieldName\":\"totalagreementvalue\",\"FilterOperator\":\"GreaterThan\",\"Value\":\"0\",\"IsValueFieldName\":false},{\"EntityName\":null,\"FieldName\":\"name\",\"FilterOperator\":\"NotNull\",\"IsValueFieldName\":false}],\"Filters\":null},\"SortOrders\":[{\"Field\":\"name\",\"SortOrder\":\"asc\"}],\"AggregateFilter\":null}",
+	     "reportConfigQuery":"{\"title\":\"Agreement Value by Type\",\"subtitle\":\"\",\"xAxis\":\"name\",\"xAxisLabel\":\"name\",\"yAxis\":\"TotalValue\",\"yAxisLabel\":\"Total Agreement Value\",\"width\":800,\"height\":600,\"readonly\":\"false\",\"chartType\":\"Column\"}",
+	     "fieldLink":"Quick Create Report",
+	     "reportTypes":"Report",
+	     "systemLink":"system",
+	     "customLink":"custom",
+	     "chartValue":"Chart"
+	     },
+	     "selectFieldLink":{
+	     "updatedReportName":" Report Updated",
+	     "updatedReportDescp":" updated Descp",
+	     "reportRename":" Report Renamed",
+	     "cloneName":" Report Cloned",
+	     "objName": "Agreement",
+	     "fieldName2": "Record Type"
+	     },
+	     "quickEditReport":{
+	     "fieldName":"Quick Edit",
+	     "cmbFilterName":"Name"
+	     },
+	     "createCloneReport":{
+	     "fieldName":"Clone",
+	     "cmbFilterName":"Name"
+	     },
+	     "renameReport":{
+	     "cmbFilterName":"Name",
+	     "searchText":"Automation Report",
+	     "fieldName" : "Rename"
+	     },
+	     "DeleteReport":{
+	     "cmbFilterName":"Name",
+	     "fieldName":"Delete",
+	     "NoneFilter":"None"
+	     },
+	     "ExportToCSV":{
+	     "cmbFilterName":"Name",
+	     "searchText":"Automation Report",
+	     "fieldName":"Export to CSV"
+	     },
+	     "CreateReportWizard":{
+	     "fieldLink":"Create Report",
+	     "viewOptionField":"Agreement",
+	     "name" : "Report Automation 1-",
+	     "descp" : "Report is created through Automation script",
+	     "objName":"Agreement",
+	     "fieldName":"Name",
+	     "fieldName1":"Total Agreement Value",
+	     "operatorValue":"In",
+	     "value":"Accepted",
+	     "value1":"Approved",
+	     "filterName":"Approval Status"
+	     },
+	     "selectReportVisualizationType":{
+	     "anchField":"Name",
+	     "objName":"Agreement ",
+	     "yAxisValue":"Total Agreement Value",
+	     "aggregateValue":"AVG",
+	     "xAxisValue":"Name"
+	     },
+	     "EditReportWizard":{
+	     "cmbFilterName":"Name",
+	     "aggregateValue":"MAX",
+	     "fieldName":"Edit"
+	     }
+}

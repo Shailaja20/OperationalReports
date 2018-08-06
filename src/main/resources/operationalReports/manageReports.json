@@ -1,0 +1,17 @@
+{
+"searchReportByFilter":{
+"name":"Test"
+},
+"reportUser":{
+"userName":"User1",
+"userName2":"User2"
+},
+"reportUserGroup":{
+"userGroup":"group 1",
+"userGroup2":"group 2"
+},
+"users":{
+"user1":"ruser9@aicaqlstg.apttuscloud.io",
+"user2":"Gofa05841"
+}
+}

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Staging_Smoke_Tests_For_Operational_Reports">
+              <span class="suite-name border-passed">Staging Smoke Tests For Operational Reports</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Staging_Smoke_Tests_For_Operational_Reports">
+                    <span>C:\Automation\op\operationalreport\stgMinor.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Staging_Smoke_Tests_For_Operational_Reports">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Staging_Smoke_Tests_For_Operational_Reports">
+                    <span>2 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Staging_Smoke_Tests_For_Operational_Reports">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Staging_Smoke_Tests_For_Operational_Reports">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Staging_Smoke_Tests_For_Operational_Reports">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Staging_Smoke_Tests_For_Operational_Reports">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">4 methods,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Staging_Smoke_Tests_For_Operational_Reports" class="hide-methods passed suite-Staging_Smoke_Tests_For_Operational_Reports"> (hide)</a> <!-- hide-methods passed suite-Staging_Smoke_Tests_For_Operational_Reports -->
+                      <a href="#" panel-name="suite-Staging_Smoke_Tests_For_Operational_Reports" class="show-methods passed suite-Staging_Smoke_Tests_For_Operational_Reports"> (show)</a> <!-- show-methods passed suite-Staging_Smoke_Tests_For_Operational_Reports -->
+                    </span>
+                    <div class="method-list-content passed suite-Staging_Smoke_Tests_For_Operational_Reports">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Staging_Smoke_Tests_For_Operational_Reports" title="com.apttus.aic.operationalReports.Tests.ManageReportTests" hash-for-method="verifyShareReportToMultipleUser">verifyShareReportToMultipleUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Staging_Smoke_Tests_For_Operational_Reports" title="com.apttus.aic.operationalReports.Tests.ManageReportTests" hash-for-method="verifyShareReportToMultipleUserGroup">verifyShareReportToMultipleUserGroup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Staging_Smoke_Tests_For_Operational_Reports" title="com.apttus.aic.operationalReports.Tests.ManageReportTests" hash-for-method="verifyShareReportToSingleUser">verifyShareReportToSingleUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Staging_Smoke_Tests_For_Operational_Reports" title="com.apttus.aic.operationalReports.Tests.ManageReportTests" hash-for-method="verifyShareReportToSingleUserGroup">verifyShareReportToSingleUserGroup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Staging_Smoke_Tests_For_Operational_Reports -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Staging_Smoke_Tests_For_Operational_Reports" class="panel Staging_Smoke_Tests_For_Operational_Reports">
+          <div class="suite-Staging_Smoke_Tests_For_Operational_Reports-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.apttus.aic.operationalReports.Tests.ManageReportTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyShareReportToMultipleUser">
+                  </a> <!-- verifyShareReportToMultipleUser -->
+                  <span class="method-name">verifyShareReportToMultipleUser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyShareReportToMultipleUserGroup">
+                  </a> <!-- verifyShareReportToMultipleUserGroup -->
+                  <span class="method-name">verifyShareReportToMultipleUserGroup</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyShareReportToSingleUser">
+                  </a> <!-- verifyShareReportToSingleUser -->
+                  <span class="method-name">verifyShareReportToSingleUser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyShareReportToSingleUserGroup">
+                  </a> <!-- verifyShareReportToSingleUserGroup -->
+                  <span class="method-name">verifyShareReportToSingleUserGroup</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Staging_Smoke_Tests_For_Operational_Reports-class-passed -->
+        </div> <!-- panel Staging_Smoke_Tests_For_Operational_Reports -->
+        <div panel-name="test-xml-Staging_Smoke_Tests_For_Operational_Reports" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Automation\op\operationalreport\stgMinor.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; verbose=&quot;2&quot; name=&quot;Staging Smoke Tests For Operational Reports&quot; parallel=&quot;tests&quot;&gt;
+  &lt;parameter name=&quot;environment&quot; value=&quot;stgMinor.properties&quot;/&gt;
+  &lt;parameter name=&quot;application&quot; value=&quot;apttusCloud&quot;/&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
+  &lt;parameter name=&quot;hubURL&quot; value=&quot;http://localhost:4444/wd/hub&quot;/&gt;
+  &lt;parameter name=&quot;runParallel&quot; value=&quot;false&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.apttus.extent.report.ExtentTestNGIReporterListener&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test name=&quot;Operational Reporting Tests&quot; group-by-instances=&quot;true&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.apttus.aic.operationalReports.Tests.ManageReportTests&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Operational Reporting Tests --&gt;
+&lt;/suite&gt; &lt;!-- Staging Smoke Tests For Operational Reports --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Staging_Smoke_Tests_For_Operational_Reports" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Staging Smoke Tests For Operational Reports</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Operational Reporting Tests (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Staging_Smoke_Tests_For_Operational_Reports" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Staging Smoke Tests For Operational Reports</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">regression</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyShareReportToMultipleUser</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyShareReportToMultipleUserGroup</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">smoke</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyShareReportToSingleUser</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyShareReportToSingleUserGroup</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Staging_Smoke_Tests_For_Operational_Reports" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Staging Smoke Tests For Operational Reports</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Staging_Smoke_Tests_For_Operational_Reports');
+function tableData_Staging_Smoke_Tests_For_Operational_Reports() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(4);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'verifyShareReportToMultipleUserGroup')
+data.setCell(0, 2, 'com.apttus.aic.operationalReports.Tests.ManageReportTests')
+data.setCell(0, 3, 25480);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verifyShareReportToMultipleUser')
+data.setCell(1, 2, 'com.apttus.aic.operationalReports.Tests.ManageReportTests')
+data.setCell(1, 3, 23539);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifyShareReportToSingleUserGroup')
+data.setCell(2, 2, 'com.apttus.aic.operationalReports.Tests.ManageReportTests')
+data.setCell(2, 3, 22676);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyShareReportToSingleUser')
+data.setCell(3, 2, 'com.apttus.aic.operationalReports.Tests.ManageReportTests')
+data.setCell(3, 3, 21693);
+window.suiteTableData['Staging_Smoke_Tests_For_Operational_Reports']= { tableData: data, tableDiv: 'times-div-Staging_Smoke_Tests_For_Operational_Reports'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <div id="times-div-Staging_Smoke_Tests_For_Operational_Reports">
+              </div> <!-- times-div-Staging_Smoke_Tests_For_Operational_Reports -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Staging_Smoke_Tests_For_Operational_Reports" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Staging Smoke Tests For Operational Reports</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Staging_Smoke_Tests_For_Operational_Reports" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Staging_Smoke_Tests_For_Operational_Reports" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.apttus.aic.operationalReports.Tests.ManageReportTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">LoginToAdminApp(false, stgMinor.properties, Chrome, http://localhost:4444/wd/hub)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verifyShareReportToSingleUser</span>
+                <span class="method-start">29900 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp(stgMinor.properties)</span>
+                <span class="method-start">51597 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifyShareReportToMultipleUser</span>
+                <span class="method-start">56878 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp(stgMinor.properties)</span>
+                <span class="method-start">80421 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifyShareReportToSingleUserGroup</span>
+                <span class="method-start">87019 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp(stgMinor.properties)</span>
+                <span class="method-start">109699 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifyShareReportToMultipleUserGroup</span>
+                <span class="method-start">115822 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">cleanUp(stgMinor.properties)</span>
+                <span class="method-start">141306 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">quitDriver</span>
+                <span class="method-start">147484 ms</span>
+              </div> <!-- configuration-suite after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

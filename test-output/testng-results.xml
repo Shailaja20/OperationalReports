@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Staging Smoke Tests For Operational Reports" duration-ms="146996" started-at="2018-08-06T14:14:01Z" finished-at="2018-08-06T14:16:28Z">
+    <groups>
+      <group name="regression">
+        <method signature="ManageReportTests.verifyShareReportToMultipleUser()[pri:0, instance:com.apttus.aic.operationalReports.Tests.ManageReportTests@20398b7c]" name="verifyShareReportToMultipleUser" class="com.apttus.aic.operationalReports.Tests.ManageReportTests"/>
+        <method signature="ManageReportTests.verifyShareReportToMultipleUserGroup()[pri:0, instance:com.apttus.aic.operationalReports.Tests.ManageReportTests@20398b7c]" name="verifyShareReportToMultipleUserGroup" class="com.apttus.aic.operationalReports.Tests.ManageReportTests"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="ManageReportTests.verifyShareReportToSingleUser()[pri:0, instance:com.apttus.aic.operationalReports.Tests.ManageReportTests@20398b7c]" name="verifyShareReportToSingleUser" class="com.apttus.aic.operationalReports.Tests.ManageReportTests"/>
+        <method signature="ManageReportTests.verifyShareReportToSingleUserGroup()[pri:0, instance:com.apttus.aic.operationalReports.Tests.ManageReportTests@20398b7c]" name="verifyShareReportToSingleUserGroup" class="com.apttus.aic.operationalReports.Tests.ManageReportTests"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test name="Operational Reporting Tests" duration-ms="146996" started-at="2018-08-06T14:14:01Z" finished-at="2018-08-06T14:16:28Z">
+      <class name="com.apttus.aic.operationalReports.Tests.ManageReportTests">
+        <test-method status="PASS" signature="LoginToAdminApp(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.apttus.aic.operationalReports.Tests.ManageReportTests@20398b7c]" name="LoginToAdminApp" is-config="true" duration-ms="29892" started-at="2018-08-06T19:44:01Z" finished-at="2018-08-06T19:44:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[stgMinor.properties]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[http://localhost:4444/wd/hub]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginToAdminApp -->
+        <test-method status="PASS" signature="verifyShareReportToSingleUser()[pri:0, instance:com.apttus.aic.operationalReports.Tests.ManageReportTests@20398b7c]" name="verifyShareReportToSingleUser" duration-ms="21693" started-at="2018-08-06T19:44:31Z" finished-at="2018-08-06T19:44:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyShareReportToSingleUser -->
+        <test-method status="PASS" signature="cleanUp(java.lang.String)[pri:0, instance:com.apttus.aic.operationalReports.Tests.ManageReportTests@20398b7c]" name="cleanUp" is-config="true" duration-ms="5273" started-at="2018-08-06T19:44:53Z" finished-at="2018-08-06T19:44:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[stgMinor.properties]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="verifyShareReportToMultipleUser()[pri:0, instance:com.apttus.aic.operationalReports.Tests.ManageReportTests@20398b7c]" name="verifyShareReportToMultipleUser" duration-ms="23539" started-at="2018-08-06T19:44:58Z" depends-on-methods="com.apttus.aic.operationalReports.Tests.ManageReportTests.verifyShareReportToSingleUser" finished-at="2018-08-06T19:45:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyShareReportToMultipleUser -->
+        <test-method status="PASS" signature="cleanUp(java.lang.String)[pri:0, instance:com.apttus.aic.operationalReports.Tests.ManageReportTests@20398b7c]" name="cleanUp" is-config="true" duration-ms="6598" started-at="2018-08-06T19:45:22Z" finished-at="2018-08-06T19:45:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[stgMinor.properties]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="verifyShareReportToSingleUserGroup()[pri:0, instance:com.apttus.aic.operationalReports.Tests.ManageReportTests@20398b7c]" name="verifyShareReportToSingleUserGroup" duration-ms="22676" started-at="2018-08-06T19:45:28Z" depends-on-methods="com.apttus.aic.operationalReports.Tests.ManageReportTests.verifyShareReportToMultipleUser" finished-at="2018-08-06T19:45:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyShareReportToSingleUserGroup -->
+        <test-method status="PASS" signature="cleanUp(java.lang.String)[pri:0, instance:com.apttus.aic.operationalReports.Tests.ManageReportTests@20398b7c]" name="cleanUp" is-config="true" duration-ms="6123" started-at="2018-08-06T19:45:51Z" finished-at="2018-08-06T19:45:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[stgMinor.properties]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="verifyShareReportToMultipleUserGroup()[pri:0, instance:com.apttus.aic.operationalReports.Tests.ManageReportTests@20398b7c]" name="verifyShareReportToMultipleUserGroup" duration-ms="25480" started-at="2018-08-06T19:45:57Z" depends-on-methods="com.apttus.aic.operationalReports.Tests.ManageReportTests.verifyShareReportToSingleUserGroup" finished-at="2018-08-06T19:46:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyShareReportToMultipleUserGroup -->
+        <test-method status="PASS" signature="cleanUp(java.lang.String)[pri:0, instance:com.apttus.aic.operationalReports.Tests.ManageReportTests@20398b7c]" name="cleanUp" is-config="true" duration-ms="5682" started-at="2018-08-06T19:46:23Z" finished-at="2018-08-06T19:46:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[stgMinor.properties]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method status="PASS" signature="quitDriver()[pri:0, instance:com.apttus.aic.operationalReports.Tests.ManageReportTests@20398b7c]" name="quitDriver" is-config="true" duration-ms="1138" started-at="2018-08-06T19:46:29Z" finished-at="2018-08-06T19:46:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+      </class> <!-- com.apttus.aic.operationalReports.Tests.ManageReportTests -->
+    </test> <!-- Operational Reporting Tests -->
+  </suite> <!-- Staging Smoke Tests For Operational Reports -->
+</testng-results>

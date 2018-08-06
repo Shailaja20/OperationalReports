@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" verbose="2" name="Failed suite [Canary Smoke Tests For Security Scopes]" parallel="tests">
+  <parameter name="environment" value="canary.properties"/>
+  <parameter name="application" value="apttusCloud"/>
+  <parameter name="browser" value="Chrome"/>
+  <parameter name="hubURL" value="http://localhost:4444/wd/hub"/>
+  <parameter name="runParallel" value="false"/>
+  <listeners>
+    <listener class-name="com.apttus.extent.report.ExtentTestNGIReporterListener"/>
+  </listeners>
+  <test name="Operational Reporting Tests" group-by-instances="true">
+    <packages>
+      <package name="com.apttus.aic.operationalReports.Tests"/>
+    </packages>
+    <classes>
+      <class name="com.apttus.aic.operationalReports.Tests.DashboardUITest"/>
+      <class name="com.apttus.aic.operationalReports.Tests.PlatformToolsTests"/>
+      <class name="com.apttus.aic.operationalReports.Tests.ReportsTests"/>
+      <class name="com.apttus.aic.operationalReports.Tests.ViewsUITest"/>
+    </classes>
+  </test> <!-- Operational Reporting Tests -->
+  <test name="Operational Reporting Tests(failed)" parallel="tests">
+    <classes>
+      <class name="com.apttus.aic.operationalReports.Tests.ReportsTests">
+        <methods>
+          <include name="CreateLineChartWizard"/>
+          <include name="CreatePivotChartWizard"/>
+          <include name="EditReportWizard"/>
+          <include name="cleanUp"/>
+          <include name="quitDriver"/>
+          <include name="CreateHorizontalBarChartWizard"/>
+          <include name="CreatePieChartWizard"/>
+          <include name="ActivateReport"/>
+          <include name="ExportToCSV"/>
+          <include name="DeActivateReport"/>
+          <include name="quickCreateReport"/>
+          <include name="DeleteReport"/>
+          <include name="createCloneReport"/>
+          <include name="LoginToAdminApp"/>
+          <include name="CreateTabularReportWizard"/>
+          <include name="quickEditReport"/>
+          <include name="CreateVerticalBarChartWizard"/>
+          <include name="renameReport"/>
+        </methods>
+      </class> <!-- com.apttus.aic.operationalReports.Tests.ReportsTests -->
+      <class name="com.apttus.aic.operationalReports.Tests.ViewsUITest">
+        <methods>
+          <include name="FilterNewWidget"/>
+          <include name="DeleteNewWgView"/>
+          <include name="DeactivatedNewView"/>
+          <include name="ActivatedNewView"/>
+          <include name="CloneNewView"/>
+          <include name="EditQuickView"/>
+          <include name="CreateNewWigdetView"/>
+          <include name="RenameNewView"/>
+          <include name="DeleteNewView"/>
+          <include name="LoginToAdminApp"/>
+          <include name="CreateQuickView"/>
+          <include name="cleanUp"/>
+          <include name="quitDriver"/>
+          <include name="EditNewView"/>
+        </methods>
+      </class> <!-- com.apttus.aic.operationalReports.Tests.ViewsUITest -->
+      <class name="com.apttus.aic.operationalReports.Tests.DashboardUITest">
+        <methods>
+          <include name="CreateNewWidget"/>
+          <include name="quitDriver"/>
+          <include name="LoginToAdminApp"/>
+          <include name="DeleteNewWidget"/>
+          <include name="cleanUp"/>
+          <include name="EditDashboard"/>
+          <include name="CloneNewWidget"/>
+          <include name="RenameDashboard"/>
+        </methods>
+      </class> <!-- com.apttus.aic.operationalReports.Tests.DashboardUITest -->
+      <class name="com.apttus.aic.operationalReports.Tests.PlatformToolsTests">
+        <methods>
+          <include name="tokenGenerations"/>
+        </methods>
+      </class> <!-- com.apttus.aic.operationalReports.Tests.PlatformToolsTests -->
+    </classes>
+  </test> <!-- Operational Reporting Tests(failed) -->
+</suite> <!-- Failed suite [Canary Smoke Tests For Security Scopes] -->

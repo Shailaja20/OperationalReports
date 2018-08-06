@@ -1,0 +1,196 @@
+	{
+		"createProductwithMandatoryFields": {
+			"productname": "Auto-productname",
+			"productcode": "Auto-Productcode"
+		},
+		"createPriceListwithMandatoryFields": {
+			"pricelistname": "Auto-pricelist" 
+		},
+
+
+
+           "addNewWidget":{
+           "EnterTitle":"New Test Widget",
+		"EnterDescription":"Dummy Test Widget",
+           "associateReportId":"AQL Pie N"
+           },
+		"CreateNewWidget":{
+		"title":"Dashboard",
+		"descp":"Dashboard",
+		"associateReportId":"Contract Activity Report"
+		},
+
+		"createDatasetObject":{
+	       "objectname":"Test",
+	       "objectDescription":"Sample",
+	       "objectAnchorObject":"2CMHBAZ3IA (6EB_2CMHBAZ3IA)",
+	       "filtersObject":"Name",
+	       "filtersOperator":"Contains",
+	       "filtersValue":"A",
+	       "orderByValue":"Created On",
+	       "sampleResultRow":"10",
+	       "sampleResultColumn":"7"
+	       },
+	       "createDatasetObject2":{
+	       "objectname":"Test1",
+	       "objectDescription":"Sample1",
+	       "objectAnchorObject":"2CMHBAZ3IA (6EB_2CMHBAZ3IA)",
+	       "filtersObject":"Name",
+	       "filtersOperator":"Contains",
+	       "filtersValue":"B",
+	       "orderByValue":"Created On",
+	       "sampleResultRow":"20",
+	       "sampleResultColumn":"8"
+	       },
+	     "filteredReportData":{
+	     "cmbFilterName":"Description",
+	     "searchText":"ignore"
+	     },
+	     "quickCreateReport":{
+	     "reportName":"Automation Report",
+	     "reportDescp": "Automation Report Description",
+	     "reportQuery":"{'EntityName':'clm_agreement','Distinct':false,'AutoExpandLookups':false,'Columns':['status','count(id) as Agreements'],'SortOrders':[{'Field':'status','SortOrder':'asc'}],'AggregateFilter':null}",
+	     "reportConfigQuery":"{'title':'Agreements by Status','subtitle':'','xAxis':'status','xAxisLabel':'Status','yAxis':'Agreements','yAxisLabel':'Number of Agreements','width':800,'height':600,'readonly':'false','chartType':'Pie'}",
+	     "fieldLink":"Quick Create Report"
+	     },
+	     "editReport":{
+	     "updatedReportName":" Report Updated",
+	     "updatedReportDescp":" updated Descp",
+	     "fieldName":"Edit"
+	     },
+	     "createCloneReport":{
+	     "fieldName":"Clone",
+	     "cloneName":" report cloned"
+	     },
+	     
+	     "CloneNewWidget":{
+	     "cloneDashName":"DashClone"
+	     },
+	     "EditDashboard":{
+	     "title":"EdtDash",
+		"descp":"Edit",
+		"associateReportId":"API Pie N"
+	     },
+	     "RenameDashboard":{
+	     "RenameDashboard":"DshRename"
+	     },
+	     "FilterDashboard":{
+	     "DashboardSearch":"API Pie N"
+	     },
+	     "EnableUsertoviewDashboard":{
+	     "title":"DashboardDisplay",
+		"descp":"Dashboard"
+		},
+	     "CreateQuickView":{
+	     "viewName":"QkView",
+	     "viewDesp":"viewDescption Test",
+	     "QuickQuery":"{\"EntityName\":\"clm_Agreement\",\"Distinct\":false,\"AutoExpandLookups\":false,\"Columns\":[\"id\"],\"Joins\":[{\"JoinType\":1,\"EntityAlias\":\"clm_AgreementHierarchy\",\"FromEntity\":\"clm_Agreement\",\"ToEntity\":\"clm_AgreementHierarchy\",\"FromAttribute\":\"Id\",\"ToAttribute\":\"AgreementLeafId\",\"JoinCriteria\":null}],\"Criteria\":{\"ExpressionOperator\":\"AND\",\"Filters\":null,\"Conditions\":[{\"EntityName\":null,\"FieldName\":\"clm_AgreementHierarchy.CreatedOn\",\"FilterOperator\":\"On\",\"Value\":\"2018-03-23T00:00:00.000\",\"IsValueFieldName\":false}]}}",
+	     "ConfigQuery":"{\"isQuickCreate\":false,\"selectedObjects\":[{\"id\":\"AgreementLeafId\",\"name\":\"Agreement Leaf\",\"type\":\"Child\",\"readonly\":false,\"valueSet\":null,\"multiple\":false,\"selected\":true,\"refObjectType\":\"clm_AgreementHierarchy\",\"refObjectTypeName\":\"Agreement Hierarchy\",\"targetFieldId\":\"Id\"}],\"selectedFilters\":[{\"id\":\"AgreementLeafId.CreatedOn\",\"operator\":\"On\",\"value\":\"2018-03-23T00:00:00.000\",\"name\":\"Agreement Hierarchy > Created On\",\"type\":\"DateTime\",\"readonly\":true,\"multiple\":false}],\"filterLogic\":\"\"}"
+	      },
+	     "FilterNewWidget":{
+	     "filtervalue":"Name",
+		"searchvalue":"Filter",
+		"associateReportId":"API Pie N"
+	     },
+	     
+	     
+	     "RenameViewcreate":{
+			"Renameview":"RenameVw"
+		},
+		"CloneNewView": {
+			"cloneViewname":"Clone" 
+		},
+		
+		"EditNewView":{
+		"viewNameEdt":"EditWg",
+		"viewDespEdt":"EditWg",
+	    "Anchor":"Agreement (clm_Agreement)",
+	    "OjName":"Agreement",
+	    "FldName":"Name",
+	    "Opertor":"Does not Ends With",
+	    "Value":"M"
+		},
+		"EdtQuickView":{
+		"viewNameEdt":"EditQk",
+		"viewDespEdt":"EditQk"
+	    },
+		"EditQuickView":{
+		"viewName":"EditQk",
+		"viewDesp":"EditQk"
+	    },
+		"MaxDashboardCount":{
+		"title":"MaxDash10",
+		"descp":"Dashboard",
+		"associateReportId":"Contract Activity Report"
+		},
+		"SearchOrderDashboard":{
+		"title":"TopDashboard",
+		"descp":"Dashboard",
+		"associateReportId":"Contract Activity Report"
+		},
+		"EndUserVerifyDashboardPage":{
+           "title":"New Test Widget",
+		"descp":"Dummy Test Widget",
+           "associateReportId":"AQL Pie N"
+           },
+           
+           "VerifyManadatoryField":{
+           "Name":"Wg-View",
+		"Descp":"Wg-View",
+	    "Anchor":"Agreement (clm_Agreement)"
+	    },
+	    "VerifyPreviewPage":{
+		"Name":"Wg-View",
+		"Descp":"Wg-View",
+	    "Anchor":"Agreement (clm_Agreement)",
+	    "OjName":"Agreement",
+	    "FldName":"Name",
+	    "Opertor":"Does not Ends With",
+	    "Value":"S"
+		},
+		"VerifyLookUpsChildObjects":{ 
+	    "Anchor":"Agreement (clm_Agreement)"
+		},
+		"VerifyAnchorObjects":{ 
+	    "Anchor":"Agreement (clm_Agreement)"
+		},
+	    "VerifyViewFieldsPage":{
+		"Name":"Wg-View",
+		"Descp":"Wg-View",
+	    "Anchor":"Agreement (clm_Agreement)",
+	    "OjName":"Agreement",
+	    "FldName":"Name",
+	    "Opertor":"Does not Ends With",
+	    "Value":"S"
+		},
+		 "VerifyViewFilterPage":{
+		"Name":"Wg-View",
+		"Descp":"Wg-View",
+	    "Anchor":"Agreement (clm_Agreement)",
+	    "OjName":"Agreement",
+	    "FldName":"Name",
+	    "Opertor":"Does not Ends With",
+	    "Value":"S"
+		},
+		"VerifyViewFilterPageEdt":{
+	    "Anchor":"Agreement (clm_Agreement)",
+	    "OjName":"Agreement",
+	    "FldName":"Name",
+	    "Opertor":"Does not Ends With",
+	    "Value":"S"   
+	    },
+	    "VerifyViewFieldPageEdt":{
+	    "Anchor":"Agreement (clm_Agreement)" 
+	    },
+	    "CreateNewWigdetView":{
+		"Name":"Wg-View",
+		"Descp":"Wg-View",
+	    "Anchor":"Agreement (clm_Agreement)",
+	    "OjName":"Agreement",
+	    "FldName":"Name",
+	    "Opertor":"Does not Ends With",
+	    "Value":"S"
+		}
+	    
+	    
+	    }
